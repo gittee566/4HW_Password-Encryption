@@ -2,9 +2,9 @@ const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
 const express = require('express');
 const app = express();
-const port = 3000;
-const ID = "suphanat";
-const password = '6252300292';
+const port = 3600;
+const ID = "Teerasak";
+const password = '123456';
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.get('/home', (req, res) => {
+app.get('/homee', (req, res) => {
     if (!req.cookies.token) return res.redirect('/error')
 
     jwt.verify(req.cookies.token, password, (err, result) => {
@@ -34,10 +34,10 @@ app.post('/login', (req, res) => {
     if (req.body.user == ID && req.body.pass == password) {
         const token = jwt.sign({ username: ID }, password)
         res.cookie('token', token)
-        res.redirect('/home')
+        res.redirect('/homee')
     } else {
         res.cookie('token', "")
-        res.redirect('/home')
+        res.redirect('/homee')
     }
 })
 
