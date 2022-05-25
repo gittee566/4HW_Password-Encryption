@@ -8,23 +8,23 @@
     <title>Login</title>
 </head>
 
-<body>
-    <!-- <a href="/home">HOME</a> -->
-    <!-- <a href="/">LOGIN</a> -->
-    <div class="card" align="center">
-        <div class="container"></div>
-        <h1>LOGIN</h1>
-        <hr>
-        <form action="/login" method="post">
-            <p class="input-label">Username</p>
-            <input type="text" placeholder="กรุณากรอก username" name="user">
-            <p class="input-label">Password</p>
-            <input type="password" placeholder="กรุณากรอก Password" name="pass">
-            <br>
-            <br>
-            <input type="submit" value="Login">
-        </form>
-    </div>
+<body style="background-color:#000 ;">
+    <div class="d-flex vh-100">
+        <div style="background-color: rgb(151, 129, 142);">
+            <div class="card" align="center">
+
+                <h1>LOGIN</h1>
+                <form action="/login" method="post">
+                    <p class="input-label">Username</p>
+                    <input type="text" placeholder="กรุณากรอก username" name="user">
+                    <p class="input-label">Password</p>
+                    <input type="password" placeholder="กรุณากรอก Password" name="pass">
+                    <br>
+                    <br>
+                    <input type="submit" value="Login">
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 <style>
@@ -33,7 +33,7 @@
     }
     
     h1 {
-        color: rgb(5, 5, 5);
+        color: rgb(255, 255, 255);
     }
 </style>
 
